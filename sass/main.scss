@@ -1,5 +1,10 @@
 $font-style: fantasy;
 
+@mixin phone {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}
 @mixin tablets {
   @media screen and(min-width:700px) {
     @content;
@@ -70,5 +75,79 @@ main {
         height: 100%;
       }
     }
+  }
+}
+
+.carousel {
+  position: relative;
+  height: 400px;
+  width: 80%;
+  margin: 0 auto;
+
+  @include phone() {
+    display: none;
+  }
+
+  .btn-carousel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+    .bi {
+      font-size: 20pt;
+    }
+  }
+  .btn-right {
+    right: -50px;
+  }
+
+  .btn-left {
+    left: -50px;
+  }
+}
+
+.carousel_img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+.carousel-container {
+  background-color: lightgreen;
+  height: 100%;
+  position: relative;
+
+  .carousel-items {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    .carousel-slide {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+  .carousel-indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 10px;
+  }
+  .current-slide {
+    background: rgba(0, 0, 0, 0.8);
   }
 }

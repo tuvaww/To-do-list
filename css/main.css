@@ -43,3 +43,58 @@ body {
       .big-img-container .img-container a .style-img {
         width: 100%;
         height: 100%; }
+
+.carousel {
+  position: relative;
+  height: 400px;
+  width: 80%;
+  margin: 0 auto; }
+  @media screen and (max-width: 700px) {
+    .carousel {
+      display: none; } }
+  .carousel .btn-carousel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer; }
+    .carousel .btn-carousel .bi {
+      font-size: 20pt; }
+  .carousel .btn-right {
+    right: -50px; }
+  .carousel .btn-left {
+    left: -50px; }
+
+.carousel_img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */ }
+
+.carousel-container {
+  background-color: lightgreen;
+  height: 100%;
+  position: relative; }
+  .carousel-container .carousel-items {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+    .carousel-container .carousel-items .carousel-slide {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%; }
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px; }
+  .carousel-nav .carousel-indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 10px; }
+  .carousel-nav .current-slide {
+    background: rgba(0, 0, 0, 0.8); }
