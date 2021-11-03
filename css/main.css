@@ -20,6 +20,10 @@ body {
     /*     text-decoration: underline;
  */ }
 
+@media screen and (min-width: 700px) {
+  main {
+    display: none; } }
+
 .big-img-container {
   display: flex;
   flex-direction: column;

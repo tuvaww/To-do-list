@@ -1,8 +1,21 @@
 $font-style: fantasy;
 
+@mixin tablets {
+  @media screen and(min-width:700px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and(min-width:1000px) {
+    @content;
+  }
+}
+
 body {
   background-color: rgb(247, 196, 204);
 }
+
 .header {
   display: flex;
   flex-direction: column;
@@ -25,6 +38,12 @@ body {
     padding-bottom: 20px;
     /*     text-decoration: underline;
  */
+  }
+}
+
+main {
+  @include tablets() {
+    display: none;
   }
 }
 
