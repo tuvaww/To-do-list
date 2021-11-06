@@ -21,28 +21,36 @@ body {
   background-color: rgb(247, 196, 204);
 }
 
-.header {
+.head-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: double black;
-  margin: 30px;
+  justify-content: center;
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: double black;
+    margin: 30px;
 
-  .heading {
-    font-family: $font-style;
-    margin: 0;
-    padding-top: 20px;
-
-    /*     text-decoration-line: underline;
- */
+    @include desktop() {
+      width: 70%;
+    }
+    @include tablets() {
+      width: 80%;
+    }
+    @include phone() {
+      width: 100%;
+    }
+    .heading {
+      font-family: $font-style;
+      margin: 0;
+      padding-top: 20px;
+    }
   }
 
   .second-heading {
     font-family: $font-style;
     margin: 0;
     padding-bottom: 20px;
-    /*     text-decoration: underline;
- */
   }
 }
 
@@ -87,6 +95,18 @@ main {
   @include phone() {
     display: none;
   }
+  @include tablets() {
+    height: 80vh;
+    width: 70%;
+  }
+  @include desktop() {
+    height: 80vh;
+    width: 75%;
+  }
+
+  .hide {
+    display: none;
+  }
 
   .btn-carousel {
     position: absolute;
@@ -112,21 +132,22 @@ main {
 .carousel_img {
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
 }
 
 .carousel-container {
-  background-color: lightgreen;
   height: 100%;
   position: relative;
   overflow: hidden;
+  @include tablets() {
+    margin-top: 100px;
+  }
   .carousel-items {
     padding: 0;
     margin: 0;
     list-style: none;
     position: relative;
     height: 100%;
-    transition: transform 0.5s ease-in;
+    transition: transform 300ms ease-in;
 
     .carousel-slide {
       position: absolute;
@@ -149,6 +170,7 @@ main {
     height: 15px;
     background: rgba(0, 0, 0, 0.3);
     margin: 10px;
+    cursor: pointer;
   }
   .current-slide {
     background: rgba(0, 0, 0, 0.8);
