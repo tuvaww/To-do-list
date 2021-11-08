@@ -38,12 +38,6 @@ let hideNavs = (slides, prevButton, nextButton, targetIndex) => {
   }
 };
 
-let test = (targetIndex) => {
-  if (targetIndex === 0) {
-    document.getElementById("styleHeading").innerHTML("hej");
-  }
-};
-
 prevButton.addEventListener("click", () => {
   let currentSlide = ul.querySelector(".current-slide");
   let prevSlide = currentSlide.previousElementSibling;
@@ -84,11 +78,6 @@ navDots.addEventListener("click", (dot) => {
   hideNavs(slides, prevButton, nextButton, targetIndex);
 });
 
-//let headings = ["Bullet journal", "Post-it", "Fall"];
-
-//for (let i = 0; i < headings.length; i++) {
-
-//if ()
-
-//console.log(headings);
-//}
+document.getElementById("newTab").addEventListener("click", () => {
+  newTab = window.open("http://127.0.0.1:5500/bullet-journal.html");
+});

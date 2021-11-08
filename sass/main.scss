@@ -64,9 +64,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*   gap: 15px;
- */
-  h3 {
+
+  .item-description {
     font-family: $font-style;
     text-decoration: underline;
     margin: 0;
@@ -88,8 +87,6 @@ main {
 
 .carousel {
   position: relative;
-  height: 400px;
-  width: 80%;
   margin: 0 auto;
 
   @include phone() {
@@ -110,8 +107,9 @@ main {
 
   .btn-carousel {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 55%;
+    /*     transform: translateY(+50%);
+ */
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -138,12 +136,14 @@ main {
   height: 100%;
   position: relative;
   overflow: hidden;
+
   @include tablets() {
     margin-top: 100px;
   }
   .carousel-items {
     padding: 0;
     margin: 0;
+    /* margin-top: 50px; */
     list-style: none;
     position: relative;
     height: 100%;
@@ -154,6 +154,15 @@ main {
       top: 0;
       bottom: 0;
       width: 100%;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .item-description {
+        font-family: $font-style;
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -171,6 +180,7 @@ main {
     background: rgba(0, 0, 0, 0.3);
     margin: 10px;
     cursor: pointer;
+    margin-bottom: 40px;
   }
   .current-slide {
     background: rgba(0, 0, 0, 0.8);
