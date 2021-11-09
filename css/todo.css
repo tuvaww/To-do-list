@@ -34,31 +34,53 @@
       .bullet-body .bullet-container .bullet-last-article .notes {
         display: flex;
         flex-direction: row;
+        gap: 10px;
+        align-items: center;
         height: 20%; }
-      .bullet-body .bullet-container .bullet-last-article textarea {
-        height: 80%;
-        width: 100%;
-        border: whitesmoke; }
+      .bullet-body .bullet-container .bullet-last-article .input-container {
+        display: flex;
+        justify-content: center; }
+      .bullet-body .bullet-container .bullet-last-article .list-ul {
+        padding: 10px;
+        cursor: pointer; }
+      .bullet-body .bullet-container .bullet-last-article .list-checked {
+        text-decoration: line-through; }
     .bullet-body .bullet-container .white {
       background-color: whitesmoke; }
   .bullet-body .bullet-input-container {
     display: flex;
-    justify-content: left;
-    gap: 20%;
-    margin: 10px; }
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    /* @include tablets() {
+      justify-content: left;
+    } */ }
     .bullet-body .bullet-input-container .bullet-input {
       display: flex;
-      justify-content: center; }
+      justify-content: center;
+      height: 30px;
+      width: 90%; }
+      .bullet-body .bullet-input-container .bullet-input .add-button {
+        background-color: whitesmoke;
+        /* height: 30px; */
+        border: 0; }
+    @media screen and (min-width: 700px) {
+      .bullet-body .bullet-input-container .space {
+        width: 5%; } }
     .bullet-body .bullet-input-container .heart {
       display: none; }
       @media screen and (min-width: 700px) {
         .bullet-body .bullet-input-container .heart {
           display: contents;
-          width: 10%; } }
+          width: 5%; } }
   .bullet-body .bullet-list {
     width: 90%;
     padding: 5px;
     border-bottom: dotted 2px black; }
+    .bullet-body .bullet-list .bi-trash-fill {
+      position: relative;
+      float: right;
+      cursor: pointer; }
   .bullet-body .bullet-second-list {
     list-style: square;
     color: rgba(155, 146, 146, 0.76);

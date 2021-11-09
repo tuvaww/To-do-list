@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To do list</title>
+    <script defer src="js/todo.js"></script>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"
@@ -27,17 +29,24 @@
             <i class="bi bi-suit-heart-fill"></i>
           </div>
           <div class="bullet-input">
-            <input />
-            <button>Add thing to do</button>
+            <input type="text" id="input" />
+            <button class="add-button">Add</button>
           </div>
+          <div class="space"></div>
         </div>
-        <ol class="bullet-ol">
-          <li class="bullet-list">Train</li>
-          <li class="bullet-list">Eat</li>
-          <li class="bullet-list">Sleep</li>
-          <li class="bullet-list"></li>
-          <li class="bullet-list"></li>
-          <li class="bullet-list"></li>
+        <ol id="ol" class="ul">
+          <li class="bullet-list">
+            Train
+            <i class="bi bi-trash-fill"></i>
+          </li>
+          <li class="bullet-list">
+            Sleep
+            <i class="bi bi-trash-fill"></i>
+          </li>
+          <li class="bullet-list">
+            Studie
+            <i class="bi bi-trash-fill"></i>
+          </li>
         </ol>
       </article>
       <article class="bullet-article white">
@@ -59,7 +68,14 @@
           <i class="bi bi-suit-heart-fill"></i>
           <h4>Notes</h4>
         </div>
-        <textarea> </textarea>
+        <div class="input-container">
+          <input id="noteInput" type="text" />
+          <button class="bullet-notes">Add note</button>
+        </div>
+        <ul id="ul">
+          <li class="list-ul">Buy avocado</li>
+          <li class="list-ul">Pay bills</li>
+        </ul>
       </article>
     </section>
   </body>

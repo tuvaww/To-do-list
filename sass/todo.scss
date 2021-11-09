@@ -60,12 +60,23 @@
       .notes {
         display: flex;
         flex-direction: row;
+        gap: 10px;
+
+        align-items: center;
         height: 20%;
       }
-      textarea {
-        height: 80%;
-        width: 100%;
-        border: whitesmoke;
+
+      .input-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .list-ul {
+        padding: 10px;
+        cursor: pointer;
+      }
+      .list-checked {
+        text-decoration: line-through;
       }
     }
 
@@ -76,19 +87,38 @@
 
   .bullet-input-container {
     display: flex;
-    justify-content: left;
-    gap: 20%;
+    justify-content: center;
+    align-items: center;
     margin: 10px;
+
+    /* @include tablets() {
+      justify-content: left;
+    } */
     .bullet-input {
       display: flex;
       justify-content: center;
+      height: 30px;
+      width: 90%;
+
+      .add-button {
+        background-color: whitesmoke;
+        /* height: 30px; */
+
+        border: 0;
+      }
+    }
+
+    .space {
+      @include tablets() {
+        width: 5%;
+      }
     }
     .heart {
       display: none;
 
       @include tablets() {
         display: contents;
-        width: 10%;
+        width: 5%;
       }
     }
   }
@@ -97,6 +127,12 @@
     width: 90%;
     padding: 5px;
     border-bottom: dotted 2px black;
+
+    .bi-trash-fill {
+      position: relative;
+      float: right;
+      cursor: pointer;
+    }
   }
 
   .bullet-second-list {
