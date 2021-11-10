@@ -1,6 +1,7 @@
 window.onload = function () {
   deleteItem();
   done();
+  undo();
 };
 
 function deleteItem() {
@@ -18,6 +19,16 @@ function done() {
   drawLine.forEach((checkedItem) => {
     checkedItem.addEventListener("click", () => {
       checkedItem.classList.add("list-checked");
+    });
+  });
+}
+
+function undo() {
+  let reverse = document.querySelector(".bi-arrow-repeat");
+  reverse.addEventListener("click", () => {
+    let hej = document.querySelectorAll(".list-ul");
+    hej.forEach((undoItem) => {
+      undoItem.classList.remove("list-checked");
     });
   });
 }

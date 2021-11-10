@@ -37,9 +37,17 @@
         gap: 10px;
         align-items: center;
         height: 20%; }
+        .bullet-body .bullet-container .bullet-last-article .notes .undo {
+          width: 85%;
+          display: flex;
+          justify-content: flex-end; }
+          .bullet-body .bullet-container .bullet-last-article .notes .undo .bi-arrow-repeat {
+            font-size: 16pt; }
       .bullet-body .bullet-container .bullet-last-article .input-container {
         display: flex;
         justify-content: center; }
+        .bullet-body .bullet-container .bullet-last-article .input-container #noteInput {
+          height: 20px; }
       .bullet-body .bullet-container .bullet-last-article .list-ul {
         padding: 10px;
         cursor: pointer; }
@@ -51,10 +59,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
-    /* @include tablets() {
-      justify-content: left;
-    } */ }
+    margin: 10px; }
     .bullet-body .bullet-input-container .bullet-input {
       display: flex;
       justify-content: center;
@@ -62,7 +67,7 @@
       width: 90%; }
       .bullet-body .bullet-input-container .bullet-input .add-button {
         background-color: whitesmoke;
-        /* height: 30px; */
+        border-radius: 5px;
         border: 0; }
     @media screen and (min-width: 700px) {
       .bullet-body .bullet-input-container .space {
@@ -87,3 +92,72 @@
     font-size: 20pt;
     border-bottom: grey solid 2px;
     width: 90%; }
+
+/* post it style */
+.post-it-body {
+  background-color: #534e4e;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media screen and (min-width: 700px) {
+    .post-it-body {
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px; } }
+  .post-it-body .post-it-container {
+    height: 100vh;
+    width: 80vw; }
+    @media screen and (min-width: 700px) {
+      .post-it-body .post-it-container {
+        width: 30vw; } }
+    .post-it-body .post-it-container .post-its {
+      width: 100%;
+      height: 30%;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column; }
+      .post-it-body .post-it-container .post-its .header-box {
+        display: flex;
+        justify-content: center; }
+  .post-it-body .green {
+    background-color: #ade43e; }
+  .post-it-body .yellow {
+    background-color: yellow; }
+  .post-it-body .pink {
+    background-color: #df43ab; }
+  .post-it-body .blue {
+    background-color: #6097e9; }
+  .post-it-body .post-it-big-container {
+    height: 100vh;
+    width: 90vw;
+    display: flex;
+    background-color: #df43ab; }
+    @media screen and (min-width: 700px) {
+      .post-it-body .post-it-big-container {
+        width: 60vw; } }
+    .post-it-body .post-it-big-container .date-box {
+      width: 50%;
+      display: flex;
+      flex-direction: column; }
+      .post-it-body .post-it-big-container .date-box .date {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+        padding-left: 5px; }
+        .post-it-body .post-it-big-container .date-box .date .box {
+          width: 50%; }
+  .post-it-body .note-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; }
+    .post-it-body .note-box .post-it-notes {
+      width: 90%;
+      height: 30%; }

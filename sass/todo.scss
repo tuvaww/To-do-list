@@ -61,14 +61,27 @@
         display: flex;
         flex-direction: row;
         gap: 10px;
-
         align-items: center;
         height: 20%;
+
+        .undo {
+          width: 85%;
+          display: flex;
+          justify-content: flex-end;
+
+          .bi-arrow-repeat {
+            font-size: 16pt;
+          }
+        }
       }
 
       .input-container {
         display: flex;
         justify-content: center;
+
+        #noteInput {
+          height: 20px;
+        }
       }
 
       .list-ul {
@@ -91,9 +104,6 @@
     align-items: center;
     margin: 10px;
 
-    /* @include tablets() {
-      justify-content: left;
-    } */
     .bullet-input {
       display: flex;
       justify-content: center;
@@ -102,8 +112,7 @@
 
       .add-button {
         background-color: whitesmoke;
-        /* height: 30px; */
-
+        border-radius: 5px;
         border: 0;
       }
     }
@@ -141,5 +150,96 @@
     font-size: 20pt;
     border-bottom: grey solid 2px;
     width: 90%;
+  }
+}
+
+/* post it style */
+
+.post-it-body {
+  background-color: rgb(83, 78, 78);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablets() {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+  .post-it-container {
+    height: 100vh;
+    width: 80vw;
+
+    @include tablets() {
+      width: 30vw;
+    }
+
+    .post-its {
+      width: 100%;
+      height: 30%;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+
+      .header-box {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .green {
+    background-color: rgb(173, 228, 62);
+  }
+  .yellow {
+    background-color: yellow;
+  }
+  .pink {
+    background-color: rgb(223, 67, 171);
+  }
+  .blue {
+    background-color: rgb(96, 151, 233);
+  }
+  .post-it-big-container {
+    height: 100vh;
+    width: 90vw;
+    display: flex;
+    background-color: rgb(223, 67, 171);
+    @include tablets() {
+      width: 60vw;
+    }
+
+    .date-box {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      .date {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+        padding-left: 5px;
+        .box {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  .note-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .post-it-notes {
+      width: 90%;
+      height: 30%;
+    }
   }
 }

@@ -97,7 +97,7 @@ main {
     width: 70%;
   }
   @include desktop() {
-    height: 80vh;
+    height: 90vh;
     width: 75%;
   }
 
@@ -108,8 +108,7 @@ main {
   .btn-carousel {
     position: absolute;
     top: 55%;
-    /*     transform: translateY(+50%);
- */
+
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -143,7 +142,7 @@ main {
   .carousel-items {
     padding: 0;
     margin: 0;
-    /* margin-top: 50px; */
+
     list-style: none;
     position: relative;
     height: 100%;
