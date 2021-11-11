@@ -6,14 +6,12 @@ let prevButton = document.querySelector(".btn-left");
 let navDots = document.querySelector(".carousel-nav");
 let dots = Array.from(navDots.children);
 
-//positionera slides bredvid istället för på varandra
 let slidePosition = (slidePhoto, index) => {
   slidePhoto.style.left = slideWidth * index + "px";
 };
 
 slides.forEach(slidePosition);
 
-// klicka vänster, flyttar slides till vänster
 let moveTo = (ul, currentSlide, targetSlide) => {
   ul.style.transform = "translateX(-" + targetSlide.style.left + ")";
   currentSlide.classList.remove("current-slide");
@@ -49,7 +47,6 @@ prevButton.addEventListener("click", () => {
   newDots(thisDot, prevDot);
   hideNavs(slides, prevButton, nextButton, prevIndex);
 });
-// klicka höger, flyttar slides till höger
 
 nextButton.addEventListener("click", () => {
   let currentSlide = ul.querySelector(".current-slide");
@@ -62,8 +59,6 @@ nextButton.addEventListener("click", () => {
   newDots(thisDot, nextDot);
   hideNavs(slides, prevButton, nextButton, nextIndex);
 });
-
-// klicka på nav prickar, flyttar till vald slide
 
 navDots.addEventListener("click", (dot) => {
   let targetDot = dot.target.closest("button");
@@ -80,4 +75,7 @@ navDots.addEventListener("click", (dot) => {
 
 document.getElementById("newTab").addEventListener("click", () => {
   newTab = window.open("http://127.0.0.1:5500/bullet-journal.html");
+});
+document.getElementById("secondTab").addEventListener("click", () => {
+  newTab = window.open("http://127.0.0.1:5500/post-it.html");
 });
